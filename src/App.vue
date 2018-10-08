@@ -1,12 +1,26 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+
+      <router-link to="/books">Books</router-link> |
+      <router-link to="/authors">Authors</router-link>
     </div>
     <router-view/>
   </div>
 </template>
+<script>
+// import Card from './components/Card.vue';
+import Books from './components/Books.vue';
+import Authors from './components/Authors.vue';
+
+export default {
+  name: 'app',
+  components: {
+    Books,
+    Authors
+  }
+};
+</script>
 
 <style>
 #app {
